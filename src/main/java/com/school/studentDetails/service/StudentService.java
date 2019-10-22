@@ -87,6 +87,24 @@ public class StudentService {
 
   }
 
+  public List<StudentInput> getStudentsDetails() {
+
+    List<Students> list2 = studentrepo.findAll();
+    List<StudentInput> studentDetails = new ArrayList<>();
+    for (int i = 0; i < list2.size(); i++) {
+      Students studentobj = list2.get(i);
+
+      StudentInput inputobj = new StudentInput();
+
+      inputobj.setStuclass(studentobj.getStuclass());
+      inputobj.setStuemail(studentobj.getStuemail());
+      inputobj.setStuname(studentobj.getStuname());
+      inputobj.setStuRollno(studentobj.getStuRollno());
+
+      studentDetails.add(inputobj);
+    }
+    return studentDetails;
+  }
 
 
   // public List<CustomStudent> getStudentsList() {

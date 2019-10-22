@@ -33,4 +33,11 @@ public class StudentController {
     return service.getNameNoEmail();
   }
 
+  @GetMapping("/StudentInfo/getdetails")
+  public List<StudentInput> getalldetails() {
+
+    return service.getStudentsDetails();
+
+
+  }
 }
