@@ -106,6 +106,20 @@ public class StudentService {
     return studentDetails;
   }
 
+  public List<Students> byRollno(int rollno) {
+    return studentrepo.findByStuRollno(rollno);
+  }
+
+  public List<Students> byStudentName(String name) {
+
+    return studentrepo.findByStuname(name);
+  }
+
+
+  public List<Students> bylastname(String name1) {
+
+    return studentrepo.findByStunameContain(name1);
+  }
 
   // public List<CustomStudent> getStudentsList() {
   // // Create empty list of custome Stuent

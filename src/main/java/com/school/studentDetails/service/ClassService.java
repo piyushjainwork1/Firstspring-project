@@ -70,7 +70,8 @@ public class ClassService {
 
       List<Students> studentlist = studentrepo.findByStuclass(classint);
 
-      System.out.println("student records for class" +" "+ name + " studnets " + studentlist.size());
+      System.out
+          .println("student records for class" + " " + name + " studnets " + studentlist.size());
 
 
     }
